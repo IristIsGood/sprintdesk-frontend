@@ -4,13 +4,13 @@
 
 import axios from 'axios';
 
-const client = axios.create({
-  baseURL: 'http://localhost:8080/api/v1',
-});
-
 // const client = axios.create({
-//   baseURL: 'http://54.254.226.187:8080/api/v1',
+//   baseURL: 'http://localhost:8080/api/v1',
 // });
+
+const client = axios.create({
+  baseURL: 'http://54.254.226.187:8080/api/v1',
+});
 
 // 请求拦截器 — 每个请求发出前自动加上 JWT token
 client.interceptors.request.use((config) => {
